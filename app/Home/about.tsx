@@ -1,9 +1,23 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Home = () => {
     return (
         <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content text-center">
+            <div className="hero-content flex flex-col items-center text-center">
+                
+                {/* Profile Image */}
+                <div className="mb-8">
+                    <Image
+                        src='/harshit.jpg'
+                        alt="Harshit Sharma"
+                        width={150}
+                        height={150}
+                        className="rounded-full border-4 border-accent shadow-lg"
+                    />
+                </div>
+
+                {/* Hero Text */}
                 <div className="max-w-xl">
                     <h1 className="text-5xl font-bold">Hello there</h1>
                     <p className="py-6">
@@ -28,16 +42,15 @@ const Home = () => {
                             <span className='font-bold'>Tools & Workflow: </span>Git/GitHub, Vercel, Postman, VS Code
                         </li>
                     </ul>
-                    <p>
+                    <p className="mt-4">
                         I’m always open to collaboration, learning opportunities, and exciting
                         projects that challenge me to grow.
                     </p>
-                    <br/>
-                    <button className="btn btn-accent">Get Started</button>
+                    <button className="btn btn-accent mt-6">Get Started</button>
                 </div>
             </div>
         </div>
-
     );
 };
+
 export default Home;
