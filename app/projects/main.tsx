@@ -1,75 +1,54 @@
 import React from 'react'
 
-const Card = ({ title, description, imgSrc }) => (
-  <div className="card bg-base-100 w-96 shadow-sm h-[60vh] m-[20px]">
-    <figure className="px-10 pt-10">
-      <img
-        src={imgSrc}
-        alt={title}
-        className="rounded-xl"
-      />
-    </figure>
+type CardProps = {
+  title: string
+  description: string
+  link?: string
+}
+
+const Card: React.FC<CardProps> = ({ title, description, link }) => (
+  <div className="card bg-neutral-content text-neutral w-96">
     <div className="card-body items-center text-center">
       <h2 className="card-title">{title}</h2>
       <p>{description}</p>
-      <div className="card-actions">
-        <button className="btn btn-primary">Buy Now</button>
+      <div className="card-actions justify-end">
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-accent"
+          >
+            Visit
+          </a>
+        )}
       </div>
     </div>
   </div>
 )
 
 const Main = () => {
-  const cardsRow1 = [
+  const cards: CardProps[] = [
     {
-      title: "Card Title",
-      description: "A card component has a figure, a body part, and inside body there are title and actions parts",
-      imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      title: "Book Recommender",
+      description: "A personalized recommendation engine that suggests books using collaborative filtering and similarity metrics.",
+      link: "https://github.com/Harshit-077/Book-Recommender"
     },
     {
-      title: "Card Title",
-      description: "A card component has a figure, a body part, and inside body there are title and actions parts",
-      imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      title: "LangGraph",
+      description: "A framework for building stateful, graph-based workflows with language models.",
+      link: "https://github.com/Harshit-077/LangGraph"
     },
-    {
-      title: "Card Title",
-      description: "A card component has a figure, a body part, and inside body there are title and actions parts",
-      imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-    }
-  ]
-
-  const cardsRow2 = [
-    {
-      title: "GG Title",
-      description: "A card component has a figure, a body part, and inside body there are title and actions parts",
-      imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-    },
-    {
-      title: "Card Title",
-      description: "A card component has a figure, a body part, and inside body there are title and actions parts",
-      imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-    },
-    {
-      title: "Card Title",
-      description: "A card component has a figure, a body part, and inside body there are title and actions parts",
-      imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-    }
+    { title: "CoWrite", description: "An AI-powered collaborative writing tool that helps generate and refine content in real-time.", link:"https://github.com/Harshit-077/CoWrite" },
+    { title: "AIE", description: "An AI exploration toolkit for experimenting with models, datasets, and custom workflows.", link:"https://github.com/Harshit-077/AIE" },
   ]
 
   return (
-    <>
-      <div className='flex justify-around'>
-        {cardsRow1.map((card, index) => (
-          <Card key={index} {...card} />
-        ))}
-      </div>
-
-      <div className='flex justify-around'>
-        {cardsRow2.map((card, index) => (
-          <Card key={index} {...card} />
-        ))}
-      </div>
-    </>
+    <div className="flex flex-wrap justify-center gap-8 p-8">
+      {cards.map((card, index) => (
+        <Card key={index} {...card} />
+      ))}
+    </div>
   )
 }
 
