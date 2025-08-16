@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 
 const Home = () => {
     return (
@@ -46,7 +47,7 @@ const Home = () => {
                         I’m always open to collaboration, learning opportunities, and exciting
                         projects that challenge me to grow.
                     </p>
-                    <button className="btn btn-accent mt-6">Get Started</button>
+                    <button className="btn btn-accent mt-6"><Link href='https://www.linkedin.com/in/harshitsharma77' target='_blank'>Get Started</Link></button>
                 </div>
             </div>
         </div>
