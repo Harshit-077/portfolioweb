@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Harshit Sharma | ML & Web Developer Portfolio",
   description: "Computer Science student passionate about Machine Learning, Backend, and Full Stack Development. Explore projects, skills, and insights.",
+  
   openGraph: {
     title: "Harshit Sharma | ML & Web Developer Portfolio",
     description:
@@ -40,8 +41,14 @@ export const metadata: Metadata = {
     images: ["./preview.png"],
   },
   icons: {
-    icon: "/favicon.ico", // put favicon.ico in /public
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
   themeColor: "#ffffff",
 
 };
