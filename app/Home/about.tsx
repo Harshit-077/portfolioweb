@@ -42,12 +42,15 @@ const Home = () => {
                         <li>
                             <span className='font-bold'>Tools & Workflow: </span>Git/GitHub, Vercel, Postman, VS Code
                         </li>
+                        <li>
+                            <span className='font-bold'>Artificial Intelligence: </span>LangChain, LangGraph, Crew AI
+                        </li>
                     </ul>
                     <p className="mt-4">
                         I’m always open to collaboration, learning opportunities, and exciting
                         projects that challenge me to grow.
                     </p>
-                    <button className="btn btn-accent mt-6"><Link href='https://www.linkedin.com/in/harshitsharma77' target='_blank'>Get Started</Link></button>
+                    <button className="btn btn-accent mt-6"><Link href='/Harshit_Sharma.pdf' target='_blank'>View Resume</Link></button>
                 </div>
             </div>
         </div>
