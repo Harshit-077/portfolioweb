@@ -14,8 +14,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Harshit Sharma | ML & Web Developer Portfolio",
-  description: "Computer Science student passionate about Machine Learning, Backend, and Full Stack Development. Explore projects, skills, and insights.",
+  description:
+    "Computer Science student passionate about Machine Learning, Backend, and Full Stack Development. Explore projects, skills, and insights.",
   
+  // ✅ Google Search Console Verification
+  verification: {
+    google: "IwPzsQ5H0sOVw6lMuKWJ-dglzEDNgyVoMHs6RvDan9I",
+  },
+
   openGraph: {
     title: "Harshit Sharma | ML & Web Developer Portfolio",
     description:
@@ -33,6 +39,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Harshit Sharma | ML & Web Developer Portfolio",
@@ -40,6 +47,7 @@ export const metadata: Metadata = {
       "Portfolio showcasing Machine Learning, Backend, and Web Development projects.",
     images: ["./preview.png"],
   },
+
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -48,21 +56,17 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
+
   manifest: "/site.webmanifest",
   themeColor: "#ffffff",
-
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme='nord'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" data-theme="nord">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

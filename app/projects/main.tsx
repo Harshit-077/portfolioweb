@@ -1,82 +1,3 @@
-// import React, { useEffect, useState } from 'react'
-
-// type CardProps = {
-//     title: string
-//     description: string
-//     link?: string
-// }
-
-
-// const Card: React.FC<CardProps> = ({ title, description, link }) => (
-//     <div className="card bg-neutral-content text-neutral w-96">
-//         <div className="card-body items-center text-center">
-//             <h2 className="card-title">{title}</h2>
-//             <p>{description}</p>
-//             <div className="card-actions justify-end">
-//                 {link && (
-//                     <a
-//                         href={link}
-//                         target="_blank"
-//                         rel="noopener noreferrer"
-//                         className="btn btn-accent"
-//                     >
-//                         Visit
-//                     </a>
-//                 )}
-//             </div>
-//         </div>
-//     </div>
-// )
-
-// const Main = () => {
-//     const cards: CardProps[] = [
-//         {
-//             title: "Book Recommender",
-//             description: "A personalized recommendation engine that suggests books using collaborative filtering and similarity metrics.",
-//             link: "https://github.com/Harshit-077/Book-Recommender"
-//         },
-//         {
-//             title: "LangGraph",
-//             description: "A framework for building stateful, graph-based workflows with language models.",
-//             link: "https://github.com/Harshit-077/LangGraph"
-//         },
-//         { title: "CoWrite", description: "An AI-powered collaborative writing tool that helps generate and refine content in real-time.", link: "https://github.com/Harshit-077/CoWrite" },
-//         { title: "AIE", description: "An AI exploration toolkit for experimenting with models, datasets, and custom workflows.", link: "https://github.com/Harshit-077/AIE" },
-//     ]
-
-//     return (
-//         <>
-//             <div className="flex flex-wrap justify-center gap-8 p-8">
-//                 {cards.map((card, index) => (
-//                     <Card key={index} {...card} />
-//                 ))}
-//             </div>
-//             <div className='flex justify-center'>
-//                 <div className="stats stats-vertical lg:stats-horizontal shadow">
-//                     <div className="stat">
-//                         <div className="stat-title">Downloads</div>
-//                         <div className="stat-value">31K</div>
-//                         <div className="stat-desc">Jan 1st - Feb 1st</div>
-//                     </div>
-
-//                     <div className="stat">
-//                         <div className="stat-title">New Users</div>
-//                         <div className="stat-value">4,200</div>
-//                         <div className="stat-desc">↗︎ 400 (22%)</div>
-//                     </div>
-
-//                     <div className="stat">
-//                         <div className="stat-title">New Registers</div>
-//                         <div className="stat-value">1,200</div>
-//                         <div className="stat-desc">↘︎ 90 (14%)</div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </>
-//     )
-// }
-
-// export default Main
 "use client"
 import React, { useEffect, useState } from 'react'
 
@@ -159,6 +80,11 @@ const Main = () => {
             title: "AIE",
             description: "An AI exploration toolkit for experimenting with models, datasets, and custom workflows.",
             link: "https://github.com/Harshit-077/AIE"
+        },
+        {
+            title: "Crew AI",
+            description: "An open-source framework for building AI agents that collaborate like teams. Learning to design workflows where multiple agents coordinate to solve complex tasks.",
+            link: "https://github.com/Harshit-077/crewAI"
         },
     ]
 
