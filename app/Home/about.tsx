@@ -50,7 +50,7 @@ const Home = () => {
                         I’m always open to collaboration, learning opportunities, and exciting
                         projects that challenge me to grow.
                     </p>
-                    <button className="btn btn-accent mt-6"><Link href='/Harshit_Sharma.pdf' target='_blank'>View Resume</Link></button>
+                    <button className="btn btn-accent mt-6"><Link href='/HarshitCV.pdf' target='_blank'>View Resume</Link></button>
                 </div>
             </div>
         </div>
